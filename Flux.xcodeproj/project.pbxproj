@@ -11,6 +11,9 @@
 		26452EE8295EC9A3002A1924 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26452EE7295EC9A3002A1924 /* ContentView.swift */; };
 		26452EEA295EC9A3002A1924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26452EE9295EC9A3002A1924 /* Assets.xcassets */; };
 		26452EED295EC9A3002A1924 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26452EEC295EC9A3002A1924 /* Preview Assets.xcassets */; };
+		26C103AB295ECEF50099B520 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C103AA295ECEF50099B520 /* CameraViewModel.swift */; };
+		26C103AF295ED1200099B520 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C103AE295ED1200099B520 /* CameraView.swift */; };
+		26C103B1295ED3F30099B520 /* CameraContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C103B0295ED3F30099B520 /* CameraContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		26452EE9295EC9A3002A1924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26452EEC295EC9A3002A1924 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26452EEE295EC9A3002A1924 /* Flux.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Flux.entitlements; sourceTree = "<group>"; };
+		26C103AA295ECEF50099B520 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		26C103AE295ED1200099B520 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		26C103B0295ED3F30099B520 /* CameraContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +58,11 @@
 		26452EE4295EC9A3002A1924 /* Flux */ = {
 			isa = PBXGroup;
 			children = (
-				26452EE5295EC9A3002A1924 /* FluxApp.swift */,
-				26452EE7295EC9A3002A1924 /* ContentView.swift */,
 				26452EE9295EC9A3002A1924 /* Assets.xcassets */,
+				26C103AC295ED1040099B520 /* Helper Views */,
+				26C103A9295ECE650099B520 /* Models */,
+				26452EE7295EC9A3002A1924 /* ContentView.swift */,
+				26452EE5295EC9A3002A1924 /* FluxApp.swift */,
 				26452EEE295EC9A3002A1924 /* Flux.entitlements */,
 				26452EEB295EC9A3002A1924 /* Preview Content */,
 			);
@@ -67,6 +75,31 @@
 				26452EEC295EC9A3002A1924 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26C103A9295ECE650099B520 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26C103AA295ECEF50099B520 /* CameraViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		26C103AC295ED1040099B520 /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				26C103B2295ED4310099B520 /* Camera */,
+			);
+			path = "Helper Views";
+			sourceTree = "<group>";
+		};
+		26C103B2295ED4310099B520 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				26C103AE295ED1200099B520 /* CameraView.swift */,
+				26C103B0295ED3F30099B520 /* CameraContainerView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +174,9 @@
 			files = (
 				26452EE8295EC9A3002A1924 /* ContentView.swift in Sources */,
 				26452EE6295EC9A3002A1924 /* FluxApp.swift in Sources */,
+				26C103AB295ECEF50099B520 /* CameraViewModel.swift in Sources */,
+				26C103B1295ED3F30099B520 /* CameraContainerView.swift in Sources */,
+				26C103AF295ED1200099B520 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +308,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Flux/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +334,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Flux/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
